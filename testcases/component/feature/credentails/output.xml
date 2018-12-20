@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181207 11:15:43.642" generator="Robot 3.0.4 (Python 2.7.12 on win32)">
+<suite source="D:\workspace\merchantB2B\testcases\component\feature\credentails\login_platform_admin.robot" id="s1" name="Login Platform Admin">
+<test id="s1-t1" name="Success to Login as Platform admin">
+<kw name="Login to MerchantB2B" library="login_keyword">
+<tags>
+<tag>login</tag>
+</tags>
+<doc>to ensure that user is able to login as platform admin</doc>
+<arguments>
+<arg>admin@manaosoftware.com</arg>
+<arg>123456789</arg>
+</arguments>
+<kw name="Go to B2B Login Page" library="web_common">
+<doc>start website before using a system</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${BACKEND_URL}</arg>
+<arg>${chrome}</arg>
+</arguments>
+<msg timestamp="20181207 11:15:45.249" level="INFO">Opening browser 'chrome' to base url 'http://ec2-3-0-61-103.ap-southeast-1.compute.amazonaws.com/'.</msg>
+<status status="PASS" endtime="20181207 11:15:51.051" starttime="20181207 11:15:45.248"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181207 11:15:52.173" starttime="20181207 11:15:51.051"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_link}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:15:52.203" starttime="20181207 11:15:52.173"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_link}</arg>
+</arguments>
+<msg timestamp="20181207 11:15:52.203" level="INFO">Clicking element '//a[@id="link-login"]'.</msg>
+<status status="PASS" endtime="20181207 11:15:52.941" starttime="20181207 11:15:52.203"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${msg_welcome}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:15:52.971" starttime="20181207 11:15:52.941"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:15:52.971" starttime="20181207 11:15:45.248"></status>
+</kw>
+<kw name="Verify Login Form" library="web_common">
+<doc>to ensure that login form included correct element</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:15:52.999" starttime="20181207 11:15:52.972"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:15:53.026" starttime="20181207 11:15:53.000"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${chk_remember}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:15:53.053" starttime="20181207 11:15:53.027"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${forgot_link}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:15:53.080" starttime="20181207 11:15:53.053"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:15:53.106" starttime="20181207 11:15:53.080"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:15:53.107" starttime="20181207 11:15:52.971"></status>
+</kw>
+<kw name="Fills in Username and Password" library="login_keyword">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181207 11:15:53.108" level="INFO">Typing text 'admin@manaosoftware.com' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" endtime="20181207 11:15:53.211" starttime="20181207 11:15:53.107"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181207 11:15:53.212" level="INFO">Typing text '123456789' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" endtime="20181207 11:15:53.291" starttime="20181207 11:15:53.211"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:15:53.291" starttime="20181207 11:15:53.107"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20181207 11:15:53.292" level="INFO">Clicking element '//input[@id="btn-login"]'.</msg>
+<status status="PASS" endtime="20181207 11:15:53.763" starttime="20181207 11:15:53.291"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:15:53.763" starttime="20181207 11:15:45.247"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:15:53.764" critical="yes" starttime="20181207 11:15:45.246"></status>
+</test>
+<test id="s1-t2" name="Fills in Wrong Password">
+<kw name="Login to MerchantB2B" library="login_keyword">
+<tags>
+<tag>login</tag>
+</tags>
+<doc>to ensure that user is able to login as platform admin</doc>
+<arguments>
+<arg>admin@manaosoftware.com</arg>
+<arg>//</arg>
+</arguments>
+<kw name="Go to B2B Login Page" library="web_common">
+<doc>start website before using a system</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${BACKEND_URL}</arg>
+<arg>${chrome}</arg>
+</arguments>
+<msg timestamp="20181207 11:15:53.768" level="INFO">Opening browser 'chrome' to base url 'http://ec2-3-0-61-103.ap-southeast-1.compute.amazonaws.com/'.</msg>
+<status status="PASS" endtime="20181207 11:15:59.437" starttime="20181207 11:15:53.768"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181207 11:16:00.555" starttime="20181207 11:15:59.437"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_link}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:00.585" starttime="20181207 11:16:00.555"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_link}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:00.586" level="INFO">Clicking element '//a[@id="link-login"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:00.851" starttime="20181207 11:16:00.586"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${msg_welcome}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:00.888" starttime="20181207 11:16:00.852"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:00.889" starttime="20181207 11:15:53.767"></status>
+</kw>
+<kw name="Verify Login Form" library="web_common">
+<doc>to ensure that login form included correct element</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:00.922" starttime="20181207 11:16:00.889"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:00.951" starttime="20181207 11:16:00.922"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${chk_remember}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:00.981" starttime="20181207 11:16:00.952"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${forgot_link}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:01.011" starttime="20181207 11:16:00.981"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:01.050" starttime="20181207 11:16:01.011"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:01.050" starttime="20181207 11:16:00.889"></status>
+</kw>
+<kw name="Fills in Username and Password" library="login_keyword">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:01.051" level="INFO">Typing text 'admin@manaosoftware.com' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:01.160" starttime="20181207 11:16:01.051"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:01.161" level="INFO">Typing text '//' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:01.237" starttime="20181207 11:16:01.161"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:01.237" starttime="20181207 11:16:01.050"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:01.237" level="INFO">Clicking element '//input[@id="btn-login"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:01.917" starttime="20181207 11:16:01.237"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:01.917" starttime="20181207 11:15:53.767"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:01.918" critical="yes" starttime="20181207 11:15:53.766"></status>
+</test>
+<test id="s1-t3" name="Fills in Wrong Username">
+<kw name="Login to MerchantB2B" library="login_keyword">
+<tags>
+<tag>login</tag>
+</tags>
+<doc>to ensure that user is able to login as platform admin</doc>
+<arguments>
+<arg>dmin@manaosoftware.com</arg>
+<arg>123456789</arg>
+</arguments>
+<kw name="Go to B2B Login Page" library="web_common">
+<doc>start website before using a system</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${BACKEND_URL}</arg>
+<arg>${chrome}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:01.921" level="INFO">Opening browser 'chrome' to base url 'http://ec2-3-0-61-103.ap-southeast-1.compute.amazonaws.com/'.</msg>
+<status status="PASS" endtime="20181207 11:16:08.402" starttime="20181207 11:16:01.921"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181207 11:16:09.522" starttime="20181207 11:16:08.402"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_link}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:09.557" starttime="20181207 11:16:09.522"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_link}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:09.557" level="INFO">Clicking element '//a[@id="link-login"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:09.841" starttime="20181207 11:16:09.557"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${msg_welcome}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:09.871" starttime="20181207 11:16:09.841"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:09.871" starttime="20181207 11:16:01.921"></status>
+</kw>
+<kw name="Verify Login Form" library="web_common">
+<doc>to ensure that login form included correct element</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:09.901" starttime="20181207 11:16:09.871"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:09.933" starttime="20181207 11:16:09.901"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${chk_remember}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:09.962" starttime="20181207 11:16:09.933"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${forgot_link}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:09.990" starttime="20181207 11:16:09.962"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:10.020" starttime="20181207 11:16:09.990"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:10.020" starttime="20181207 11:16:09.871"></status>
+</kw>
+<kw name="Fills in Username and Password" library="login_keyword">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:10.021" level="INFO">Typing text 'dmin@manaosoftware.com' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:10.139" starttime="20181207 11:16:10.021"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:10.139" level="INFO">Typing text '123456789' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:10.216" starttime="20181207 11:16:10.139"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:10.217" starttime="20181207 11:16:10.021"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:10.217" level="INFO">Clicking element '//input[@id="btn-login"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:10.599" starttime="20181207 11:16:10.217"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:10.599" starttime="20181207 11:16:01.920"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:10.600" critical="yes" starttime="20181207 11:16:01.920"></status>
+</test>
+<test id="s1-t4" name="Leaves Empty Field">
+<kw name="Login to MerchantB2B" library="login_keyword">
+<tags>
+<tag>login</tag>
+</tags>
+<doc>to ensure that user is able to login as platform admin</doc>
+<arguments>
+<arg>//</arg>
+<arg>//</arg>
+</arguments>
+<kw name="Go to B2B Login Page" library="web_common">
+<doc>start website before using a system</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${BACKEND_URL}</arg>
+<arg>${chrome}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:10.603" level="INFO">Opening browser 'chrome' to base url 'http://ec2-3-0-61-103.ap-southeast-1.compute.amazonaws.com/'.</msg>
+<status status="PASS" endtime="20181207 11:16:16.234" starttime="20181207 11:16:10.603"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181207 11:16:17.362" starttime="20181207 11:16:16.235"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_link}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:17.392" starttime="20181207 11:16:17.362"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_link}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:17.393" level="INFO">Clicking element '//a[@id="link-login"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:17.616" starttime="20181207 11:16:17.392"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${msg_welcome}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:17.645" starttime="20181207 11:16:17.616"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:17.645" starttime="20181207 11:16:10.602"></status>
+</kw>
+<kw name="Verify Login Form" library="web_common">
+<doc>to ensure that login form included correct element</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:17.673" starttime="20181207 11:16:17.646"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:17.700" starttime="20181207 11:16:17.673"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${chk_remember}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:17.728" starttime="20181207 11:16:17.700"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${forgot_link}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:17.756" starttime="20181207 11:16:17.728"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<status status="PASS" endtime="20181207 11:16:17.784" starttime="20181207 11:16:17.756"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:17.784" starttime="20181207 11:16:17.645"></status>
+</kw>
+<kw name="Fills in Username and Password" library="login_keyword">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:17.785" level="INFO">Typing text '//' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:17.855" starttime="20181207 11:16:17.785"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:17.856" level="INFO">Typing text '//' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:17.926" starttime="20181207 11:16:17.856"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:17.926" starttime="20181207 11:16:17.784"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20181207 11:16:17.927" level="INFO">Clicking element '//input[@id="btn-login"]'.</msg>
+<status status="PASS" endtime="20181207 11:16:17.991" starttime="20181207 11:16:17.926"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:17.991" starttime="20181207 11:16:10.602"></status>
+</kw>
+<status status="PASS" endtime="20181207 11:16:17.992" critical="yes" starttime="20181207 11:16:10.601"></status>
+</test>
+<status status="PASS" endtime="20181207 11:16:17.994" starttime="20181207 11:15:43.644"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login Platform Admin" pass="4">Login Platform Admin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
